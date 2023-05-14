@@ -1,4 +1,4 @@
-<body style="display: flex; justify-content: center">
+<body style="display: flex; justify-content: center; align-itens: center">
     <h1>
         Open Security
     </h1>
