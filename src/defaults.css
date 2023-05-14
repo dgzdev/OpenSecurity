@@ -10,6 +10,22 @@
     color: #f5f5f5;
     background-color: #343a40;
 }
-.color-sec {
 
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  /* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(24, 24, 24);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(61, 103, 192);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 162, 255);
 }

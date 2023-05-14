@@ -1,49 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 * {
     --default-font: 'Righteous', cursive;
+    --title-font: 'Sora', sans-serif;
+    --text-font: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* COLOR STYLES */
+.dark {
+    background-color: rgb(36, 36, 36);
+    color: rgb(230, 230, 230);
+}
+.rdark {
+    background-color: rgb(26, 26, 26);
+    color: rgb(230, 230, 230);
 }
 
 body {
-    background-color: rgb(36, 36, 36);
-    margin: 0;
-    padding: 0;
-    font-family: var(--default-font);
     user-select: none;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.textinput {
-    position: relative;
-    width: 75vh;
-    height: 10vh;
+
+
+/* SIZES */
+.w100 {
+    height: 100%;
+}
+.img {
+    max-width: 100%;
+    height: auto;
 }
 
-#verifier-text {
-    margin-top: 7vh;
-    color: rgb(36,36,36);
-    font-size: clamp(1vh, 7vh, 3vh);
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
-    font-family: var(--default-font);
-    user-select: none;
+.logobtn {
+    float: left;
+    display: hidden !important;
+    overflow: hidden;
+    color:rgb(26, 26, 26, 0) !important;
+    background-color: rgb(0,0,0,0) !important;
+    border: none !important;
+}
+
+.logo {
+    width: 3vw;
+            
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+
+    margin-top: .3vw !important;
+    margin-bottom: .3vw !important;
+
+    margin-right: 3vw !important;
+    margin-left: 1vw !important;
+
+    filter:brightness(0) invert(1);
+}
+
+/* CLASSES */
+.topbar {
+    overflow: hidden;
     width: 100%;
     height: 100%;
+}
+.topbar a {
+    float: left;
+    display: block;
+    color: rgb(230, 230, 230);
     text-align: center;
-    border: outset black 1vh;
+    padding: 1vw 1vw 1vw 1vw;
+    text-decoration: none;
+    font-size: clamp(.3vw, .85vw, 1.3vw);
+    font-family: var(--default-font);
+    user-select: none;
 
-    border-radius: 10vh;
+    margin-top: .3vw !important;
+    margin-bottom: .3vw !important;
+    margin-right: 1vw !important;
+    width: 7vw !important;
+    height: 100% !important;
+    
+    border-radius: 1vw;
+
+    transition: color 0.2s ease-in-out;
+}
+.topbar a.active {
+    background-color: rgb(61, 103, 192);
+    color: rgb(230, 230, 230);      
+}
+.topbar a:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(61, 103, 192);
+}
+.topbar a.disable {
+    pointer-events: none;
+    color: rgb(61, 61, 61);
 }
 
-h4 {
-    margin-top: 10vh;
-    color: rgb(230, 230, 230);
-    font-size: 4vh;
+/* IMPORTANT */
+.content {
+    overflow: hidden;
+
+    margin: auto;
+    padding: auto;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.content h1 {
+    font-size: clamp(1.5vw, 3vw, 5vw);
+    font-family:var(--title-font);
+    font-weight: 800;
+    letter-spacing: .3vw;
+
+    margin-top: 4vw;
+
     text-align: center;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
-    padding: .5rem;
-    font-family: var(--default-font);
+    user-select: none;
+}
+
+.content span textarea {
+    font-size: clamp(.35vw, 1vw, 1.34vw);
+    font-family:var(--text-font);
+
+    font-weight: 800;
+    border: none;
+    border-radius: 1vw;
+
+    resize: none;
+    width: 65vw;
+    height: 50vh;
+
+    padding: 1.45rem;
+
+    text-align: center;
+    vertical-align: middle;
+
+    text-decoration: none; 
+    outline: none !important;
+
+    margin-top: .3vw;
+}
+
+.input {
+    font-size: clamp(.3vw, .85vw, 1.3vw);
+    font-family:var(--default-font);
+    font-weight: 800;
+    letter-spacing: .1vw;
+
+    cursor: pointer;    
+
+    border: none;
+    border-radius: 1vw;
+
+    padding: .5vw 1vw .5vw 1vw;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-inline: .3vh          ;
+
+    transition: background-color 0.2s ease-in-out;
+}
+.input:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(24,24,24);
+}
+
+.primary {
+    background-color: rgb(61, 103, 192);
+    color: rgb(230, 230, 230);
+}
+.red {
+    background-color: rgb(192, 61, 61);
+    color: rgb(230, 230, 230);
+}
+.org {
+    background-color: rgb(192, 103, 61);
+    color: rgb(230, 230, 230);
+}
+
+.content span h4 {
+    font-size: clamp(.3vw, .85vw, 1.3vw);
+    font-family:var(--title-font);
+    font-weight: 800;
+    letter-spacing: .1vw;
+
+    margin-top: 0;
+    margin-bottom: 1vw;
+    margin-inline: .3vh;
+
     user-select: none;
 }

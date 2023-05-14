@@ -8,22 +8,59 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" href="/src/defaults.css"> <!-- Default Stylesheet for all pages -->
     <link rel="stylesheet" href="/src/home.css"> <!-- Stylesheet for home page -->
-    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/123509118?v=4" type="image/x-icon">
-    <title>SinceVoid Portfolio</title>
+    <link rel="shortcut icon" href="/img/escudo.png" type="image/x-icon">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Righteous&family=Sora:wght@400;800&display=swap');
+    </style>
+
+    <!--
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    -->
+    
+    <title>Open Security</title>
 </head>
-<body>
+<body class="dark">
     <!-- This is the home page -->
     <!-- <script src="/index.js"></script> Inserts the Home Page Script -->
-
-
     <header>
-        <!-- This is the header -->
-        <!-- Simple text verifier -->
-        <div class="textinput">
-            <input type="text" name="verifier" id="verifier-text">
-        </div>
-        <h4 id="verifier-result">No innapropriate words found</h4>
-        <script src="./scripts/text-verifier.js"></script>
+        <!-- Topbar -->
+        <nav>
+            <div class="topbar rdark">
+                <button class="btn logobtn">
+                    <img src="./img/logo.png" alt="" class="img logo">  
+                </button>
+
+
+                <a href="/" class="button active">Text</a>
+                <a href="" class="button disable">Image</a>
+                <a href="" class="button disable">Video</a>
+                <a href="" class="button disable">Audio</a>
+            </div>
+        </nav>
+
+        <!-- Text Verifier -->
+        <section class="content">
+            <h1>
+                Text Verifier
+            </h1>
+            <span>
+                <textarea placeholder="Type here your message." type="text" class="rdark" name="verifier" id="verifier-text"></textarea>
+            </span>
+
+            <span>
+                <input type="submit" value="Submit" id="verifier-submit" class="input primary">
+                <input type="button" value="Reset" id="verifier-reset" class="input red">
+                <input type="button" value="Example" id="verifier-example" class="input org">
+            </span>
+
+            <span>
+                <h4 id="verifier-result">No innapropriate words found</h4>
+                <script src="./scripts/text-verifier.js"></script>
+            </span>
+        </section>
+
 
     </header>
 
