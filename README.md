@@ -1,9 +1,4 @@
-<head>
-    <style>
-        body {display: flex; justify-content: center; align-itens: center;}
-    </style>
-</head>
-<body>
+<body style="display: flex; justify-content: center">
     <h1>
         Open Security
     </h1>
@@ -17,4 +12,4 @@
         Currently in Beta!
     </h4>
     <a href="https://sincevoid.github.io/OpenSecurity/">Preview</a>
-</body>
+</body> 
