@@ -16,11 +16,9 @@
   }
   /* Track */
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+    background: rgb(59, 59, 59);
 }
-::-webkit-scrollbar-track {
-    background: rgb(24, 24, 24);
-}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgb(61, 103, 192);
